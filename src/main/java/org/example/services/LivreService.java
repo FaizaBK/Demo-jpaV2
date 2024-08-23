@@ -1,4 +1,4 @@
-package fr.diginamic.services;
+package org.example.services;
 
 import fr.diginamic.entities.Livre;
 import jakarta.persistence.EntityManager;

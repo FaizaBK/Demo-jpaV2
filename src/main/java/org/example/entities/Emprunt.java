@@ -1,4 +1,4 @@
-package fr.diginamic.entities;
+package org.example.entities;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
