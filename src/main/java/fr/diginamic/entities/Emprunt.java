@@ -1,4 +1,4 @@
-package org.example.entities;
+package fr.diginamic.entities;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
@@ -23,10 +23,14 @@ public class Emprunt {
     @Column(name = "DATE_FIN")
     private LocalDate dateFin;
 
+    // Relation ManyToOne avec l'entité Client (un client peut avoir plusieurs emprunts)
+    // La colonne 'ID_CLIENT' dans la table 'EMPRUNT' fait référence à l'identifiant du client
     @ManyToOne
     @JoinColumn(name = "ID_CLIENT")
     private Client client;
 
+    // Relation ManyToMany avec l'entité Livre (un emprunt peut concerner plusieurs livres)
+    // La table d'association 'COMPO' relie 'ID_EMPRUNT' (dans EMPRUNT) et 'ID_LIVRE' (dans LIVRE)
     @ManyToMany
     @JoinTable(
             name = "COMPO",

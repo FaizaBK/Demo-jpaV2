@@ -1,4 +1,4 @@
-package org.example.entities;
+package fr.diginamic.entities;
 
 import jakarta.persistence.*;
 
@@ -6,14 +6,17 @@ import jakarta.persistence.*;
 @Table(name = "LIVRE")
 public class Livre {
 
+    // Identifiant unique du livre
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
 
+    // Titre du livre
     @Column(name = "TITRE")
     private String titre;
 
+    // Auteur du livre
     @Column(name = "AUTEUR")
     private String auteur;
 

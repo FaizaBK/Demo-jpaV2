@@ -1,4 +1,4 @@
-package org.example;
+package fr.diginamic;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -15,7 +15,7 @@ public class ConnexionJpa {
             // Créer une instance d'EntityManager
             entityManager = entityManagerFactory.createEntityManager();
 
-            // Vérifier la connexion
+            // Vérification de la connexion
             System.out.println("Connexion à la base de données réussie!");
         } catch (Exception e) {
             e.printStackTrace();
